@@ -1,0 +1,38 @@
+<header class="page-top">
+  <div matRipple class="top-cont">
+      <h1 class="page-title">CONTACT</h1>
+  </div>
+</header>
+<main>
+  <h2 class="contact-intro">Please feel free to contact me using the form below</h2>
+  <div class="container">
+    <!-- <div class="d-flex justify-content-center mt-3"> -->
+    <div class="contactContainer">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name"[(ngModel)]="name">
+            <div></div>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="email">
+            <div></div>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="3" [(ngModel)]="message"></textarea>
+          <div></div>
+        </div>
+        <div class="confirmessage form-text" [hidden]="hideSuccessMessage">
+          お問い合わせありがとうございます。3営業日以内にお返事致します。
+        </div>
+        <div class="errorMessage form-text" [hidden]="hideErrorMessage">
+          メッセージの送信に失敗しました。もう一度お試しください。
+        </div>
+        <div class="d-flex justify-content-center">
+          <button [disabled] = "!name || !email || !message" class="btn" (click)="submitForm()">Submit</button>
+        </div>
+
+    </div>
+  </div>
+</main>

@@ -1,0 +1,223 @@
+/*
+color
+#616161
+#aaaaaa(title)
+*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+}
+
+@mixin flex($jc: center, $al: center) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $al;
+}
+
+@mixin background($size: cover, $repeat: no-repeat, $tb-position: 50%, $rl-position: 50%) {
+    background-size: $size;
+    background-repeat: $repeat;
+    background-position: $tb-position $rl-position;
+}
+
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+}
+
+h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-bottom: 0;
+    // color: #616161;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrap {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pc-only {
+    display: none;
+}
+
+.top-cont {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url(assets/img/bg/topBg.png);
+    @include background($tb-position: 80%);
+}
+
+.page-top {
+    padding: 50px 30px 30px 30px;
+    height: 40vh;
+}
+
+.page-title {
+    letter-spacing: 4.3px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 45px;
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+}
+
+.section-title {
+    font-size: 73px;
+    color: #aaaaaa;
+    font-weight: 700;
+    letter-spacing: 7.3px;
+    margin-bottom: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.workThum {
+    margin: 0 auto 48px auto;
+    width: 300px;
+}
+
+.workThum:last-child {
+    margin-bottom: 0;
+}
+
+.workTitle {
+    text-align: left;
+    margin-top: 16px;
+}
+
+.workSkills {
+    text-align: left;
+    margin-top: 4px;
+    font-size: 10px;
+}
+
+.workDescription {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.translate {
+    color: #fff;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@media only screen and (min-width: 768px){
+
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    h3 {
+        font-size: 16px;
+    }
+    
+    p {
+        font-size: 20px;
+    }
+
+    .page-top {
+        padding: 50px;
+    }
+
+    .page-title {
+        letter-spacing: 15px;
+        font-size: 90px;
+    }
+    
+    .section-title {
+        font-size: 100px;
+        letter-spacing: 16px;
+        margin-bottom: 48px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    
+    h1 {
+        font-size: 36px;
+    }
+    
+    h2 {
+        font-size: 32px;
+    }
+
+    .pc-only {
+        display: block;
+    }
+
+    .sp-tb {
+        display: none;
+    }
+
+    .wrap {
+        width: 80%;
+    }
+
+    .section-title {
+        font-size: 155px;
+        letter-spacing: 20px;
+    }
+    
+    .page-top {
+        padding: 60px;
+        height: 80vh;
+    }
+
+    .page-title {
+        font-size: 140px;
+        letter-spacing: 20px;
+        right: 16px;
+        bottom: 16px;
+    }
+
+    .workTitle {
+        font-size: 27px;
+    }
+
+    .workSkills {
+        font-size: 12px;
+    }
+
+    .workDescription {
+        font-size: 16px;
+    }
+}

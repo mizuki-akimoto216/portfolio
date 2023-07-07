@@ -1,0 +1,55 @@
+<header class="home-top">
+    <div matRipple class="top-cont">
+        <h1 class="page-title">MIZUKI AKIMOTO</h1>
+        <h2 class="top-intro">Web design, UIUX design, Web development</h2>
+    </div>
+</header>
+<main>
+    <section class="home-intro wrap">
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+    </section>
+    <section class="home-works wrap">
+        <h1 class="section-title">WORKS</h1>
+        <div class="container">
+            <div class="row">
+                <div class="workThum col-12 col-md-6 col-xl-4" *ngFor="let work of workList">
+                    <a routerLink="/works">
+                        <img src="http://localhost:1337{{work.attributes.workThum.data.attributes.url}}" alt="">
+                        <h1 class="workTitle">{{work.attributes.workTitle}}</h1>
+                        <p class="workSkills">{{work.attributes.skills}}</p>
+                        <p class="workDescription">{{work.attributes.workDescription}}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a class="homeLink" routerLink="/works">MORE<div class="homeLinkArrow"></div>
+        </a>
+    </section>
+    <section class="home-about sp-tb wrap">
+        <h1 class="section-title">ABOUT</h1>
+        <div class="home-about-f">
+            <img class="aboutPic" src="../../assets/img/profileHome.png" alt="">
+            <div class="home-about-l">
+                <p class="aboutText">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con
+                </p>
+                <a class="homeLink" routerLink="/about">MORE<div class="homeLinkArrow"></div></a>
+            </div>
+        </div>
+    </section>
+    <section class="home-about pc-only wrap">
+        <div class="about-pc-f">
+            <img class="aboutPic" src="../../assets/img/profileHome.png" alt="">
+            <div class="home-about-l">
+                <h1 class="section-title">ABOUT</h1>
+                <p class="aboutText">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con
+                </p>
+                <a class="homeLink" routerLink="/about">MORE<div class="homeLinkArrow"></div></a>
+            </div>
+        </div>
+    </section>
+</main>

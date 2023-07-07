@@ -1,0 +1,98 @@
+@import '../../styles.scss';
+
+main {
+    @include background();
+	background-image: url(../../assets/img/bg/homeBg.png);
+    padding: 80px 0;
+}
+
+/*-------------------------------------------
+Tab
+--------------------------------------------*/
+
+main {
+	min-height: 1110px;
+}
+
+.area {
+    @include flex();
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
+
+.tab_class {
+	margin: 0 12px 80px 12px;
+	text-align: center;
+	display: block;
+	float: left;
+	order: -1;
+	cursor: pointer;
+	h2 {
+		font-size: 16px;
+		margin-bottom: 2px;
+	}
+}
+
+input[name="tab_name"] {
+	display: none;
+}
+
+input:checked + .tab_class {
+	border-bottom: 2px solid #aaaaaa;
+}
+
+.content_class {
+	display: none;
+	width: 100%;
+}
+
+input:checked + .tab_class + .content_class {
+	display: block;
+}
+
+@media only screen and (min-width: 768px){
+
+	.area {
+		width: 680px;
+	}
+
+	.tab_class {
+		margin: 0 24px 80px 24px;
+		h2 {
+			font-size: 24px;
+			margin-bottom: 2px;
+		}
+	}
+
+	.workThum {
+        margin: 0 20px 48px 20px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+
+	main {
+		min-height: 2000px;
+	}
+
+	/*-------------------------------------------
+	Tab
+	--------------------------------------------*/
+	.area {
+		width: 1040px;
+		padding-top: 120px;
+	}
+
+	.tab_class {
+		margin: 0 50px 80px 50px;
+		h2 {
+			font-size: 28px;
+			margin-bottom: 2px;
+		}
+	}
+	
+    .workThum {
+        margin: 0 60px 48px 60px;
+        width: 400px;
+    }
+}

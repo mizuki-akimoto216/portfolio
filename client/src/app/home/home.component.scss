@@ -1,0 +1,252 @@
+@import '../../styles.scss';
+
+/*-------------------------------------------
+Header
+--------------------------------------------*/
+.home-top {
+    height: 100vh;
+    padding: 50px 30px 30px 30px;
+}
+
+.page-title {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    text-align: right;
+    font-size: 44px;
+}
+
+.top-intro {
+    position: absolute;
+    left: 24px;
+    bottom: 310px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    transform: rotate(90deg);
+    transform-origin:0 50%;
+    width: 100%;
+}
+
+main {
+    @include background();
+    background-image: url(../../assets/img/bg/homeBg.png);
+}
+
+.homeLink {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    @include flex($jc: flex-end);
+    color: #000;
+    margin-top: 24px;
+}
+
+.homeLinkArrow {
+    width: 70px;
+    height: 8px;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: skew(45deg);
+    margin-left: 8px;
+}
+
+/*-------------------------------------------
+Home Intro
+--------------------------------------------*/
+.home-intro {
+    padding-top: 80px;
+}
+
+
+/*-------------------------------------------
+Home Works
+--------------------------------------------*/
+.home-works {
+    margin-top: 80px;
+    .section-title {
+        text-align: left;
+    }
+}
+
+/*-------------------------------------------
+Home About
+--------------------------------------------*/
+.home-about {
+    margin-top: 80px;
+    position: relative;
+    .section-title {
+        position: absolute;
+        text-align: right;
+        top: 20px;
+        right: 0;
+    }
+}
+
+.aboutPic {
+    width: 280px;
+    margin-right: 50px;
+    border-radius: 5px;
+}
+
+.aboutText {
+    margin-top: 24px;
+}
+
+@media only screen and (min-width: 768px){
+
+    .home-top {
+        padding: 50px;
+    }
+
+    .homeLink {
+        font-size: 24px;
+    }
+
+    .homeLinkArrow {
+        width: 100px;
+        height: 11px;
+        margin-left: 3px;
+    }
+
+    /*-------------------------------------------
+    Header
+    --------------------------------------------*/
+    .home-top {
+        .page-title {
+            font-size: 70px;
+            margin-bottom: 2px;
+            right: 16px;
+            bottom: 16px;
+            width: 500px;
+        }
+    }
+
+    .top-intro {
+        font-size: 22px;
+        bottom: 512px;
+        letter-spacing: 2px;
+    }
+
+    /*-------------------------------------------
+    Home Intro
+    --------------------------------------------*/
+    .home-intro {
+        padding-top: 120px;
+    }
+
+    /*-------------------------------------------
+    Home Works
+    --------------------------------------------*/
+    .home-works {
+        margin-top: 120px;
+    }
+
+    .workThum {
+        width: 350px;
+        margin: 0 auto 48px auto;
+    }
+
+    /*-------------------------------------------
+    Home About
+    --------------------------------------------*/
+    .home-about {
+        margin-top: 120px;
+        .homeLink {
+            margin-top: 12px;
+        }
+    }
+
+    .home-about-f {
+        @include flex($al: flex-end);
+    }
+
+    .aboutPic {
+        width: 420px;
+        margin-right: 0;
+    }
+
+    .aboutText {
+        margin-top: 0;
+        text-align: right;
+    }
+} 
+
+@media only screen and (min-width: 1200px){
+    
+    .home-top {
+        padding: 60px;
+        .page-title {
+            font-size: 100px;
+            width: 600px;
+        }
+    }
+
+    .top-intro {
+        font-size: 24px;
+        left: 32px;
+        bottom: 557px;
+    }
+
+    .homeLink {
+        font-size: 24px;
+        margin-top: 0;
+    }
+
+    .homeLinkArrow {
+        width: 100px;
+        margin-left: 5px;
+    }
+
+    /*-------------------------------------------
+    Home Intro
+    --------------------------------------------*/
+    .home-intro {
+        padding-top: 160px;
+
+        h1 {
+            margin-bottom: 24px;
+        }
+    }
+
+    /*-------------------------------------------
+    Home Works
+    --------------------------------------------*/
+    .home-works {
+        margin-top: 160px;
+    }
+    
+    .workThum {
+        margin: 0 auto 48px auto;
+    }
+
+    /*-------------------------------------------
+    Home About
+    --------------------------------------------*/
+    .home-about {
+        margin-top: 160px;
+        position: initial;
+        .section-title {
+            position: initial;
+        }
+    }
+
+    .about-pc-f {
+        @include flex();
+    }
+
+    .aboutPic {
+        width: 550px;
+        margin-left: 100px;
+    }
+
+    .aboutText {
+        line-height: 55px;
+        margin-bottom: 100px;
+        width: 500px;
+        margin-left: 60px;
+    }
+
+    .home-about-l {
+        margin-left: 60px;
+    }
+}

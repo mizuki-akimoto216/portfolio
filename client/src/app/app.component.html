@@ -1,0 +1,39 @@
+<nav class="fixed-top">
+    <div>
+        <h2 class="translate">EN | JP</h2>
+        <div class="openbtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="g-nav">
+            <div id="g-nav-list">
+                <ul>
+                    <li><a routerLink="/home"><h2>Home</h2></a></li>
+                    <li><a routerLink="/works"><h2>Works</h2></a></li>
+                    <li><a routerLink="/about"><h2>About</h2></a></li>
+                    <li><a routerLink="/contact"><h2>Contact</h2></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="circle-bg"></div>
+    </div>
+</nav>
+<router-outlet></router-outlet>
+<a class="wrap contactLink" routerLink="/contact">
+    <img src="../assets/img/contact.png" alt="">
+</a>
+<footer>
+    <div class="wrap">
+        <h2 class="footer-name">MIZUKI AKIMOTO</h2>
+        <div class="footer-flex">
+            <ul class="footer-menu">
+                <li><a routerLink="/home">Home</a></li>
+                <li><a routerLink="/works">Works</a></li>
+                <li><a routerLink="/about">About</a></li>
+                <li><a routerLink="/contact">Contact</a></li>
+            </ul>
+            <p class="copy">&copy; MIUZKI AKIMOTO ALL RIGHTS RESERVED</p>
+        </div>
+    </div>
+</footer>

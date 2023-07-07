@@ -1,0 +1,170 @@
+@import '../../styles.scss';
+
+/*-------------------------------------------
+About Profile
+--------------------------------------------*/
+.about-profile {
+    margin-top: 80px;
+}
+
+.profilePic {
+    width: 300px;
+}
+
+.profileName {
+    margin: 32px 0 16px 0;
+}
+
+/*-------------------------------------------
+About Career
+--------------------------------------------*/
+.about-career {
+    margin-top: 80px;
+    text-align: left;
+    @include background();
+    background-image: url(../../assets/img/bg/careerBg.png);
+    padding-bottom: 50px;
+}
+
+.about-career-cont {
+    text-align: left;
+}
+
+.career-cont {
+    margin-bottom: 56px;
+}
+
+/*-------------------------------------------
+About Skills
+--------------------------------------------*/
+.about-skills {
+    margin-top: 80px;
+    @include background();
+    background-image: url(../../assets/img/bg/skillBg.png);
+    padding: 45px 0 32px 0;
+    
+    .section-title {
+        color: #fff;
+        margin: 0;
+        text-align: right;
+    }
+}
+
+.skillName {
+    color: #fff;
+}
+
+.skillIcon {
+    height: 60px;
+}
+
+.skill {
+    margin-bottom: 48px;
+}
+
+@media only screen and (min-width: 768px){
+    /*-------------------------------------------
+    About Career
+    --------------------------------------------*/
+    .about-career {
+        margin-top: 0;
+        padding: 180px 0;
+    }
+
+    .about-skills {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+
+    /*-------------------------------------------
+    About Profile
+    --------------------------------------------*/
+    .about-profile {
+        width: 80%;
+        margin-top: 160px;
+        @include flex($al: flex-end);
+    }
+
+    .profilePic {
+        order: 1;
+        width: 500px;   
+        padding-bottom: 32px;
+    }
+
+    .profileText {
+        order: 0;
+        width: 450px;
+    }
+
+    .profileName {
+        margin-bottom: 40px;
+    }
+
+    .profileDesc{
+        line-height: 40px;
+    }
+    
+    /*-------------------------------------------
+    About Career
+    --------------------------------------------*/
+
+    .about-career {
+        background-image: none;
+        position: relative;
+        .section-title {
+            position: absolute;
+            top: 220px;
+            right: -80px;
+        }
+    }
+
+    .about-career-cont {
+        width: 70%;
+        padding: 200px 100px;
+        background-image: url(../../assets/img/bg/careerBg.png);
+        @include background();
+    }
+
+    .career-cont {
+        width: 90%;
+        margin: 0 auto 64px auto;
+    }
+
+    .career-year {
+        font-size: 20px;
+    }
+
+    .career-company {
+        margin-bottom: 16px;
+    }
+
+    /*-------------------------------------------
+    About Skills
+    --------------------------------------------*/
+
+    .about-skills {
+        .section-title {
+            font-size: 120px;
+        }
+    }
+
+    .skill-cont {
+        margin: 50px auto 0 auto;
+        width: 90%;
+    }
+
+    .skill {
+        margin-bottom: 60px;
+    }
+
+    .skillName {
+        font-size: 20px;
+    }
+
+    .skillIcon {
+        height: 80px;
+        margin-bottom: 16px;
+    }
+}

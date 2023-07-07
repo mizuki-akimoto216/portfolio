@@ -1,0 +1,55 @@
+
+###
+GET http://localhost:1337/api/work-lists?populate=*
+
+###
+GET http://localhost:1337/api/careers?populate=*
+
+###
+GET http://localhost:1337/api/skills?populate=*
+
+###
+GET http://localhost:1337/api/work-lists?filters[category][$eq]=webapp&populate=*
+
+###
+GET http://localhost:1337/api/work-lists?filters[category][$eq]=uiux&populate=*
+
+###
+GET http://localhost:1337/api/work-lists?filters[category][$eq]=webdesign&populate=*
+
+###
+POST http://localhost:1337/api/leads
+Content-Type: application/json
+
+{
+    "data":{
+        "name": "test test",
+        "email": "test@test.com",
+        "message": "Test user from REST client"
+    }
+}
+
+# ###
+# GET http://localhost:1337/api/works/1?populate=*
+
+# ###
+# GET http://localhost:1337/api/work-lists?filters[workTitle][$eq]=Fupecker
+
+# ###
+# GET http://localhost:1337/api/work-lists?sort=id:asc&populate=*
+
+# ###
+# GET http://localhost:1337/api/work-lists?sort=id:desc&populate=*
+
+# ###
+# PUT http://localhost:1337/api/work-lists/9
+# Content-Type: application/json
+
+# {
+#     "data":{
+#         "workTitle": "bbb"
+#     }
+# }
+
+# ###
+# DELETE http://localhost:1337/api/work-lists/9
