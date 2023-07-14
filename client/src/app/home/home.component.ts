@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit} from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -11,11 +12,13 @@ export class HomeComponent implements OnInit  {
   // WorkList
   workList:any[] = [];
 
+  serverURL = environment.server;
+
   constructor(private http: HttpClient){}
   
   ngOnInit():void {
 
-    this.http.get<any>('http://localhost:1337/api/work-lists?populate=*').subscribe(response => {
+    this.http.get<any>(this.serverURL + '/api/work-lists?populate=*').subscribe(response => {
       this.workList = response.data.slice(0, 6);
     })
   }
