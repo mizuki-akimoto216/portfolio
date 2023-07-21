@@ -1,12 +1,11 @@
 <header class="page-top">
-  <div matRipple class="top-cont">
+  <div matRipple class="top-cont fadeIn">
       <h1 class="page-title">CONTACT</h1>
   </div>
 </header>
 <main>
-  <h2 class="contact-intro">Please feel free to contact me using the form below</h2>
-  <div class="container">
-    <!-- <div class="d-flex justify-content-center mt-3"> -->
+  <p class="contact-intro fadeIn">下記フォームからお気軽にお問い合わせください</p>
+  <div class="container fadeIn">
     <div class="contactContainer">
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
@@ -32,7 +31,6 @@
         <div class="d-flex justify-content-center">
           <button [disabled] = "!name || !email || !message" class="btn" (click)="submitForm()">Submit</button>
         </div>
-
     </div>
   </div>
 </main>

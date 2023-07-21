@@ -1,0 +1,30 @@
+<header class="wrap">
+    <a class="fadeIn" href="{{workDetail.attributes.URL}}">
+        <img class="mainImg" src="{{serverURL}}{{workDetail.attributes.thum.data.attributes.url}}" alt="">
+    </a>
+</header>
+<main class="wrap work-detail-main">
+    <ul class="work-intro fadeUpTrigger">
+        <li class="work-intro-d">
+            <h2>Project</h2>
+            <p>{{workDetail.attributes.project}}</p>
+        </li>
+        <li class="work-intro-d">
+            <h2>Skill</h2>
+            <p>{{workDetail.attributes.skill}}</p>
+        </li>
+        <li class="work-intro-d">
+            <h2>Responsive</h2>
+            <p>{{workDetail.attributes.responsive}}</p>
+        </li>
+        <li class="work-intro-d">
+            <h2>URL</h2>
+            <p><a href="{{workDetail.attributes.URL}}">{{workDetail.attributes.URL}}</a></p>
+        </li>
+    </ul>
+    <div class="description fadeUpTrigger">
+        {{workDetail.attributes.description}}
+    </div>
+    <img class="fullImg fadeUpTrigger" src="{{serverURL}}{{workDetail.attributes.fullImage.data.attributes.url}}" alt="">
+</main>
+

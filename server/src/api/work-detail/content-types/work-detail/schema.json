@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "work_details",
+  "info": {
+    "singularName": "work-detail",
+    "pluralName": "work-details",
+    "displayName": "WorkDetail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "thum": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "project": {
+      "type": "string"
+    },
+    "skill": {
+      "type": "string"
+    },
+    "responsive": {
+      "type": "string"
+    },
+    "URL": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "fullImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "workTag": {
+      "type": "string"
+    }
+  }
+}

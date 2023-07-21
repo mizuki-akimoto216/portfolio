@@ -63,6 +63,14 @@ About Skills
 }
 
 @media only screen and (min-width: 768px){
+
+    /*-------------------------------------------
+    About Profile
+    --------------------------------------------*/
+    .profileDesc {
+        line-height: 2rem;
+    }
+
     /*-------------------------------------------
     About Career
     --------------------------------------------*/
@@ -73,6 +81,10 @@ About Skills
 
     .about-skills {
         margin-top: 0;
+    }
+
+    .career-desc{
+        line-height: 1.5rem;
     }
 }
 
@@ -103,7 +115,7 @@ About Skills
     }
 
     .profileDesc{
-        line-height: 40px;
+        line-height: 2rem;
     }
     
     /*-------------------------------------------
@@ -138,6 +150,10 @@ About Skills
 
     .career-company {
         margin-bottom: 16px;
+    }
+
+    .career-desc{
+        line-height: 2rem;
     }
 
     /*-------------------------------------------

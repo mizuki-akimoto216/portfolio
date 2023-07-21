@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { WorksComponent } from './works/works.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
+import { WorkDetailComponent } from './work-detail/work-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     AboutComponent,
     WorksComponent,
-    ContactComponent
+    ContactComponent,
+    WorkDetailComponent
   ],
   imports: [
     BrowserModule,

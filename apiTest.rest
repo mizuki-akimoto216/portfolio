@@ -54,8 +54,14 @@ Content-Type: application/json
 # ###
 # DELETE http://localhost:1337/api/work-lists/9
 
-#@url= http://localhost:1337
-@url= https://hammerhead-app-fq8v3.ondigitalocean.app
+@url= http://localhost:1337
+#@url= https://hammerhead-app-fq8v3.ondigitalocean.app
 
 ###
 GET {{url}}/api/work-lists?populate=*
+
+###
+GET {{url}}/api/work-details?populate=*
+
+###
+GET {{url}}/api/work-details?filters[workTag][$eq]=nautique&populate=*

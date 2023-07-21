@@ -1,54 +1,58 @@
-<header class="home-top">
+<header class="home-top fadeIn">
     <div matRipple class="top-cont">
         <h1 class="page-title">MIZUKI AKIMOTO</h1>
         <h2 class="top-intro">Web design, UIUX design, Web development</h2>
     </div>
 </header>
 <main>
-    <section class="home-intro wrap">
-        <h1>Lorem ipsum dolor sit amet</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+    <section class="home-intro wrap fadeUpTrigger">
+        <h1>Aiming to create works that are flexible like water</h1>
+        <p>作るものの世界観を柔軟に表現できるデザイナ－を目指して</p>
     </section>
     <section class="home-works wrap">
-        <h1 class="section-title">WORKS</h1>
+        <h1 class="section-title fadeUpTrigger">WORKS</h1>
         <div class="container">
             <div class="row">
-                <div class="workThum col-12 col-md-6 col-xl-4" *ngFor="let work of workList">
-                    <a routerLink="/works">
-                        <img src="http://localhost:1337{{work.attributes.workThum.data.attributes.url}}" alt="">
-                        <h1 class="workTitle">{{work.attributes.workTitle}}</h1>
-                        <p class="workSkills">{{work.attributes.skills}}</p>
-                        <p class="workDescription">{{work.attributes.workDescription}}</p>
-                    </a>
+                <div class="workThum col-12 col-md-6 col-xl-4 fadeUpTrigger" *ngFor="let work of workList">
+                    <div *ngIf="work.attributes.behanceURL; else workDetailLink">
+                        <a target="_blank" class="workThumImg" href="{{work.attributes.behanceURL}}">
+                            <img src="{{serverURL}}{{work.attributes.workThum.data.attributes.url}}" alt="">
+                        </a>
+                    </div>
+                    <ng-template #workDetailLink>
+                        <a target="_blank" class="workThumImg" [routerLink]="['/workDetail', work.attributes.workTag ]">
+                            <img src="{{serverURL}}{{work.attributes.workThum.data.attributes.url}}" alt="">
+                        </a>
+                    </ng-template>
+                    <h1 class="workTitle">{{work.attributes.workTitle}}</h1>
+                    <p class="workSkills">{{work.attributes.skills}}</p>
+                    <p class="workDescription">{{work.attributes.workDescription}}</p>
                 </div>
             </div>
         </div>
-        <a class="homeLink" routerLink="/works">MORE<div class="homeLinkArrow"></div>
-        </a>
+        <a class="homeLink fadeUpTrigger" routerLink="/works">MORE<div class="homeLinkArrow"></div></a>
     </section>
-    <section class="home-about sp-tb wrap">
+    <section class="home-about sp-tb wrap fadeUpTrigger">
         <h1 class="section-title">ABOUT</h1>
         <div class="home-about-f">
             <img class="aboutPic" src="../../assets/img/profileHome.png" alt="">
             <div class="home-about-l">
-                <p class="aboutText">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con
+                <p class="aboutText fadeUpTrigger">
+                    大学卒業後、システムエンジニア、バックエンドエンジニアとして計6年ほど働いたのち、ウェブデザイナーもしくはUIUXデザイナーへのキャリアチェンジを目指してカナダのweb開発専門学校にて1年間留学中
                 </p>
-                <a class="homeLink" routerLink="/about">MORE<div class="homeLinkArrow"></div></a>
+                <a class="homeLink fadeUpTrigger" routerLink="/about">MORE<div class="homeLinkArrow"></div></a>
             </div>
         </div>
     </section>
     <section class="home-about pc-only wrap">
         <div class="about-pc-f">
-            <img class="aboutPic" src="../../assets/img/profileHome.png" alt="">
+            <img class="aboutPic fadeUpTrigger" src="../../assets/img/profileHome.png" alt="">
             <div class="home-about-l">
-                <h1 class="section-title">ABOUT</h1>
-                <p class="aboutText">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con
+                <h1 class="section-title fadeUpTrigger">ABOUT</h1>
+                <p class="aboutText fadeUpTrigger">
+                    大学卒業後、システムエンジニア、バックエンドエンジニアとして計6年ほど働いたのち、ウェブデザイナーもしくはUIUXデザイナーへのキャリアチェンジを目指してカナダのweb開発専門学校にて1年間留学中
                 </p>
-                <a class="homeLink" routerLink="/about">MORE<div class="homeLinkArrow"></div></a>
+                <a class="homeLink fadeUpTrigger" routerLink="/about">MORE<div class="homeLinkArrow"></div></a>
             </div>
         </div>
     </section>

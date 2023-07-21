@@ -1,0 +1,73 @@
+header {
+    padding-top: 50px;
+}
+
+.work-detail-main {
+    text-align: left;
+    margin-top: 80px;
+}
+
+.work-intro-d {
+    margin-bottom: 16px;
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 6px;
+    }
+}
+
+.work-intro {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.description {
+    margin-top: 80px;
+    font-size: 12px;
+    line-height: 1.5rem;
+}
+
+.fullImg {
+    margin-top: 80px;
+}
+
+@media only screen and (min-width: 768px){
+
+    .work-detail-main{
+        width: 70%;
+    }
+
+    .work-intro-d {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+            width: 180px;
+            font-size: 25px;
+            margin-right: 32px;
+        }
+
+        p {
+            width: 400px;
+            font-size: 16px;
+        }
+    }
+
+    .description {
+        font-size: 15px;
+        line-height: 1.8rem;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+
+    .work-detail-main{
+        width: 60%;
+        max-width: 1000px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}

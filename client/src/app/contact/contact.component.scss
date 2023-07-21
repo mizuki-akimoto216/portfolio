@@ -6,6 +6,7 @@ main {
 }
 
 .contact-intro {
+    font-size: 16px;
     margin: 40px auto;
     text-align: center;
 }
@@ -50,6 +51,7 @@ input, textarea {
 @media only screen and (min-width: 768px){
 
     .contact-intro {
+        font-size: 18px;
         margin: 80px auto;
     }
 

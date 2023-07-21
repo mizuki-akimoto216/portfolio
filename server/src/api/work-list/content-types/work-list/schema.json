@@ -36,6 +36,12 @@
         "uiux",
         "webdesign"
       ]
+    },
+    "workTag": {
+      "type": "string"
+    },
+    "behanceURL": {
+      "type": "string"
     }
   }
 }

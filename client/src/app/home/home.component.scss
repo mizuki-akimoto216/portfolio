@@ -55,6 +55,9 @@ Home Intro
 --------------------------------------------*/
 .home-intro {
     padding-top: 80px;
+    p {
+        margin-top: 16px;
+    }
 }
 
 
@@ -168,6 +171,7 @@ Home About
     .aboutText {
         margin-top: 0;
         text-align: right;
+        line-height: 2.5rem;
     }
 } 
 
