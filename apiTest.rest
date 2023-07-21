@@ -54,8 +54,8 @@ Content-Type: application/json
 # ###
 # DELETE http://localhost:1337/api/work-lists/9
 
-@url= http://localhost:1337
-#@url= https://hammerhead-app-fq8v3.ondigitalocean.app
+#@url= http://localhost:1337
+@url= https://cms.mizukiakimoto.me
 
 ###
 GET {{url}}/api/work-lists?populate=*

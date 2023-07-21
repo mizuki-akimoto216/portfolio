@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit  {
   workList:any[] = [];
 
   serverURL = environment.server;
+  isProduction = environment.production;
 
   constructor(private http: HttpClient){}
   

@@ -16,12 +16,18 @@
                 <div class="workThum col-12 col-md-6 col-xl-4 fadeUpTrigger" *ngFor="let work of workList">
                     <div *ngIf="work.attributes.behanceURL; else workDetailLink">
                         <a target="_blank" class="workThumImg" href="{{work.attributes.behanceURL}}">
-                            <img src="{{serverURL}}{{work.attributes.workThum.data.attributes.url}}" alt="">
+                            <img *ngIf="isProduction; else localImg" src="{{work.attributes.workThum.data.attributes.url}}" alt="">
+                            <ng-template #localImg>
+                                <img src="{{serverURL}}{{work.attributes.workThum.data.attributes.url}}" alt="">
+                            </ng-template>
                         </a>
                     </div>
                     <ng-template #workDetailLink>
                         <a target="_blank" class="workThumImg" [routerLink]="['/workDetail', work.attributes.workTag ]">
-                            <img src="{{serverURL}}{{work.attributes.workThum.data.attributes.url}}" alt="">
+                            <img *ngIf="isProduction; else localImg" src="{{work.attributes.workThum.data.attributes.url}}" alt="">
+                            <ng-template #localImg>
+                                <img src="{{serverURL}}{{work.attributes.workThum.data.attributes.url}}" alt="">
+                            </ng-template>
                         </a>
                     </ng-template>
                     <h1 class="workTitle">{{work.attributes.workTitle}}</h1>
