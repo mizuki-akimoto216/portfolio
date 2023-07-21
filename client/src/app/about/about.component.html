@@ -36,7 +36,7 @@
             <div class="container">
                 <div class="row">
                     <div class="skill col-4 col-md-3 col-xl-2 fadeUpTrigger" *ngFor="let skill of skillList">
-                        <img class="skillIcon" src="http://localhost:1337{{skill.attributes.skillIcon.data.attributes.url}}" alt="">
+                        <img class="skillIcon" src="{{serverURL}}{{skill.attributes.skillIcon.data.attributes.url}}" alt="">
                         <p class="skillName">{{skill.attributes.name}}</p>
                     </div>
                 </div>

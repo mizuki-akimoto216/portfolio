@@ -12,6 +12,7 @@ export class AboutComponent implements OnInit{
   careerList:any[] = [];
   skillList:any[] = [];
   serverURL = environment.server;
+  isProduction = environment.production;
 
   constructor(private http: HttpClient){}
 
@@ -23,5 +24,9 @@ export class AboutComponent implements OnInit{
     this.http.get<any>(this.serverURL + '/api/skills?populate=*').subscribe(response => {
       this.skillList = response.data;
     })
+
+    if(this.isProduction){
+      this.serverURL = ""
+    }
   }
 }

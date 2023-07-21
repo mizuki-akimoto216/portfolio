@@ -54,14 +54,20 @@ Content-Type: application/json
 # ###
 # DELETE http://localhost:1337/api/work-lists/9
 
-#@url= http://localhost:1337
-@url= https://cms.mizukiakimoto.me
+@url= http://localhost:1337
+#@url= https://cms.mizukiakimoto.me
 
 ###
 GET {{url}}/api/work-lists?populate=*
+
+###
+GET {{url}}/api/work-lists?filters[workTag][$eq]=fupecker&populate=deep
 
 ###
 GET {{url}}/api/work-details?populate=*
 
 ###
 GET {{url}}/api/work-details?filters[workTag][$eq]=nautique&populate=*
+
+###
+GET {{url}}/api/blogs?populate=deep

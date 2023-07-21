@@ -13,6 +13,7 @@ export class WorkDetailComponent {
   workDetail:any;
 
   serverURL = environment.server;
+  isProduction = environment.production;
 
   constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient){}
 
@@ -23,5 +24,10 @@ export class WorkDetailComponent {
     this.http.get<any>(this.serverURL + '/api/work-details?filters[workTag][$eq]=' + workTag + '&populate=*').subscribe(resposive => {
       this.workDetail = resposive.data[0];
     })
+
+    if(this.isProduction){
+      this.serverURL = ""
+    }
+    
   }
 }

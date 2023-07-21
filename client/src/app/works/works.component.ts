@@ -15,6 +15,7 @@ export class WorksComponent implements OnInit {
   uiuxList:any[] = [];
   webDesignList:any[] = [];
   serverURL = environment.server;
+  isProduction = environment.production;
 
   constructor(private http: HttpClient){}
 
@@ -34,5 +35,9 @@ export class WorksComponent implements OnInit {
     this.http.get<any>(this.serverURL + '/api/work-lists?filters[category][$eq]=webdesign&populate=*').subscribe(response => {
       this.webDesignList = response.data;
     })
+
+    if(this.isProduction){
+      this.serverURL = ""
+    }
   }
 }

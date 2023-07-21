@@ -21,6 +21,10 @@ export class HomeComponent implements OnInit  {
 
     this.http.get<any>(this.serverURL + '/api/work-lists?populate=*').subscribe(response => {
       this.workList = response.data.slice(0, 6);
+
+      if(this.isProduction){
+        this.serverURL = ""
+      }
     })
   }
 }
