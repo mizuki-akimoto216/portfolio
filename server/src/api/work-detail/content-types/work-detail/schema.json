@@ -45,6 +45,12 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "gitHub": {
+      "type": "string"
     }
   }
 }
