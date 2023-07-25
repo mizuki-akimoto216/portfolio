@@ -7,7 +7,7 @@
 <main>
     <section class="home-intro wrap fadeUpTrigger">
         <h1>Aiming to create works that are flexible like water</h1>
-        <p>作るものの世界観を柔軟に表現できるデザイナ－を目指して</p>
+        <p>Aiming to be a designer who can flexibly express the world view of works</p>
     </section>
     <section class="home-works wrap">
         <h1 class="section-title fadeUpTrigger">WORKS</h1>
@@ -20,7 +20,7 @@
                         </a>
                     </div>
                     <ng-template #workDetailLink>
-                        <a target="_blank" class="workThumImg" [routerLink]="['/workDetail', work.attributes.workTag ]">
+                        <a class="workThumImg" [routerLink]="['/workDetail', work.attributes.workTag ]">
                             <img src="{{serverURL}}{{work.attributes.workThum.data.attributes.url}}" alt="">
                         </a>
                     </ng-template>

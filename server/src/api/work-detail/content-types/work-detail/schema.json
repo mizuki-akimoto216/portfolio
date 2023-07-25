@@ -32,9 +32,6 @@
     "URL": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
     "fullImage": {
       "type": "media",
       "multiple": false,
@@ -45,6 +42,15 @@
     },
     "workTag": {
       "type": "string"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "gitHub": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }

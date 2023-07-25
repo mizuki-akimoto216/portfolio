@@ -21,6 +21,20 @@ header {
     width: 70%;
 }
 
+.site-github {
+    text-align: right;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+}
+
+.github, .url {
+    border-bottom: 1px solid black;
+}
+
+.github {
+    margin-right: 24px;
+}
+
 .description {
     margin-top: 80px;
     font-size: 12px;
@@ -69,5 +83,9 @@ header {
 
     .description {
         font-size: 16px;
+    }
+
+    .site-github {
+        font-size: 23px;
     }
 }
