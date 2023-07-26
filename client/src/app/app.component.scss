@@ -10,6 +10,13 @@ Navigation
     padding: 20px 0;
 }
 
+.logo {
+    width: 25px;
+    position:fixed;
+    top:12px;
+    left: 13px;
+}
+
 .nav-menu {
     width: 32px;
 }
@@ -222,6 +229,10 @@ footer .wrap {
         font-size: 24px;
     }
 
+    .logo {
+        width: 28px;
+    }
+
     /*-------------------------------------------
     Contact
     --------------------------------------------*/
@@ -272,6 +283,12 @@ footer .wrap {
     .openbtn.active span:nth-last-of-type(3) {
         width: 55%;
     }
+    
+    .logo {
+        width: 35px;
+        left: 19px;
+    }
+    
     /*-------------------------------------------
     Contact
     --------------------------------------------*/
