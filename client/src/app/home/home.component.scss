@@ -254,32 +254,3 @@ Home About
         margin-left: 60px;
     }
 }
-
-@media only screen and (min-width: 2000px){
-
-    .home-top {
-        padding: 100px 130px;
-    }
-
-    main {
-        min-height: 2800px;
-    }
-
-    .home-intro {
-        padding-top: 200px;
-    }
-
-    /*-------------------------------------------
-    Home Works
-    --------------------------------------------*/
-    .home-works {
-        margin-top: 240px;
-    }
-
-    /*-------------------------------------------
-    Home About
-    --------------------------------------------*/
-    .home-about {
-        margin-top: 240px;
-    }
-}
