@@ -96,3 +96,18 @@ input:checked + .tab_class + .content_class {
         width: 400px;
     }
 }
+
+@media only screen and (min-width: 2000px){
+
+    main {
+        min-height: 2800px;
+    }
+
+	.area {
+		padding-top: 200px;
+	}
+
+	.tab_class {
+		margin: 0 50px 100px 50px;
+	}
+}

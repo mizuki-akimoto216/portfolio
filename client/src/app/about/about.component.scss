@@ -184,3 +184,25 @@ About Skills
         margin-bottom: 16px;
     }
 }
+
+@media only screen and (min-width: 2000px){
+
+    /*-------------------------------------------
+    About Career
+    --------------------------------------------*/
+
+    .about-career {
+        .section-title {
+            right: 155px;
+        }
+    }
+
+    .about-career-cont {
+        width: 53%;
+        margin-left: 200px;
+    }
+
+    .career-cont {
+        width: 90%;
+    }
+}
