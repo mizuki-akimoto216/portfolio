@@ -11,6 +11,7 @@ import { WorksComponent } from './works/works.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { WorkDetailComponent } from './work-detail/work-detail.component';
+import { ScrollingModule } from '@angular/cdk/scrolling'; 
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { WorkDetailComponent } from './work-detail/work-detail.component';
     AppRoutingModule,
     HttpClientModule,
     // BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
