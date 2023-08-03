@@ -20,7 +20,7 @@
                         </a>
                     </div>
                     <ng-template #workDetailLink>
-                        <a class="workThumImg" [routerLink]="['/workDetail', work.attributes.workTag ]">
+                        <a target="_blank" class="workThumImg" [routerLink]="['/workDetail', work.attributes.workTag ]">
                             <img src="{{serverURL}}{{work.attributes.workThum.data.attributes.url}}" alt="">
                         </a>
                     </ng-template>
