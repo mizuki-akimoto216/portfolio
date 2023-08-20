@@ -112,6 +112,12 @@ li {
     width: 300px;
 }
 
+.workThumImg {
+    img {
+        border-radius: 5px;
+    }
+}
+
 .workThum:last-child {
     margin-bottom: 0;
 }
