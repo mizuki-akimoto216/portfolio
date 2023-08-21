@@ -31,6 +31,9 @@
     },
     "description": {
       "type": "text"
+    },
+    "stock": {
+      "type": "string"
     }
   }
 }
