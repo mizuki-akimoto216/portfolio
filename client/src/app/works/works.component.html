@@ -26,17 +26,17 @@
                 </div>
             </div>
         </div>
-        <input type="radio" name="tab_name" id="webApp">
-        <label class="tab_class fadeIn" for="webApp"><h2>Web App</h2></label>
+        <input type="radio" name="tab_name" id="uiux">
+        <label class="tab_class fadeIn" for="uiux"><h2>UI/UX</h2></label>
         <div class="container content_class">
             <div class="row">
-                <div class="workThum col-12 col-md-6 col-xl-4 fadeUp" *ngFor="let webApp of webAppList">
-                    <a target="_blank" class="workThumImg" [routerLink]="['/workDetail', webApp.attributes.workTag ]">
-                        <img src="{{serverURL}}{{webApp.attributes.workThum.data.attributes.url}}" alt="">
+                <div class="workThum col-12 col-md-6 col-xl-4 fadeUp" *ngFor="let uiux of uiuxList">
+                    <a target="_blank" class="workThumImg" href="{{uiux.attributes.behanceURL}}">
+                        <img src="{{serverURL}}{{uiux.attributes.workThum.data.attributes.url}}" alt="">
                     </a>
-                    <h1 class="workTitle">{{webApp.attributes.workTitle}}</h1>
-                    <p class="workSkills">{{webApp.attributes.skills}}</p>
-                    <p class="workDescription">{{webApp.attributes.workDescription}}</p>
+                    <h1 class="workTitle">{{uiux.attributes.workTitle}}</h1>
+                    <p class="workSkills">{{uiux.attributes.skills}}</p>
+                    <p class="workDescription">{{uiux.attributes.workDescription}}</p>
                 </div>
             </div>
         </div>
@@ -54,17 +54,17 @@
                 </div>
             </div>
         </div>
-        <input type="radio" name="tab_name" id="uiux">
-        <label class="tab_class fadeIn" for="uiux"><h2>UI/UX</h2></label>
+        <input type="radio" name="tab_name" id="webApp">
+        <label class="tab_class fadeIn" for="webApp"><h2>Web App</h2></label>
         <div class="container content_class">
             <div class="row">
-                <div class="workThum col-12 col-md-6 col-xl-4 fadeUp" *ngFor="let uiux of uiuxList">
-                    <a target="_blank" class="workThumImg" href="{{uiux.attributes.behanceURL}}">
-                        <img src="{{serverURL}}{{uiux.attributes.workThum.data.attributes.url}}" alt="">
+                <div class="workThum col-12 col-md-6 col-xl-4 fadeUp" *ngFor="let webApp of webAppList">
+                    <a target="_blank" class="workThumImg" [routerLink]="['/workDetail', webApp.attributes.workTag ]">
+                        <img src="{{serverURL}}{{webApp.attributes.workThum.data.attributes.url}}" alt="">
                     </a>
-                    <h1 class="workTitle">{{uiux.attributes.workTitle}}</h1>
-                    <p class="workSkills">{{uiux.attributes.skills}}</p>
-                    <p class="workDescription">{{uiux.attributes.workDescription}}</p>
+                    <h1 class="workTitle">{{webApp.attributes.workTitle}}</h1>
+                    <p class="workSkills">{{webApp.attributes.skills}}</p>
+                    <p class="workDescription">{{webApp.attributes.workDescription}}</p>
                 </div>
             </div>
         </div>

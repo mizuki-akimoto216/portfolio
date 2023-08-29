@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit} from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { CommonService } from '../services/common.service';
 
 @Component({
   selector: 'app-about',
@@ -10,14 +11,15 @@ import { environment } from 'src/environments/environment';
 export class AboutComponent implements OnInit{
 
   careerList:any[] = [];
+  careerEnList:any[] = [];
   skillList:any[] = [];
   serverURL = environment.server;
   isProduction = environment.production;
 
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient, private service: CommonService){}
 
   ngOnInit():void {
-    this.http.get<any>(this.serverURL + '/api/careers?populate=*').subscribe(response => {
+    this.http.get<any>(this.serverURL + '/api/careers?locale=' + this.service.locale).subscribe(response => {
       this.careerList = response.data;
     })
 
